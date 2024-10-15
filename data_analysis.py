@@ -11,6 +11,7 @@ def put_korean_text(image, text, position, font_path='data/NanumGothic.ttf', fon
     font = ImageFont.truetype(font_path, font_size)
 
     # 텍스트 추가
+    # draw.text(position, list(text)[0], font=font, fill=color)
     draw.text(position, text, font=font, fill=color)
 
     # PIL 이미지를 다시 OpenCV 이미지로 변환
@@ -58,6 +59,7 @@ for json_file in json_files:
     for annotation in data['annotations']:
         points = annotation['points']
         label = annotation['label']
+        # label = annotation['attributes'].values()
 
         # 바운딩 박스 좌표 추출 (왼쪽 상단, 오른쪽 하단)
         top_left = (int(points[0][0]), int(points[0][1]))
@@ -67,7 +69,6 @@ for json_file in json_files:
         cv2.rectangle(image, top_left, bottom_right, (255, 0, 0), 2)
 
         # 레이블 텍스트 추가
-        # cv2.putText(image, label, (top_left[0], top_left[1] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (255, 0, 0), 2)
         image = put_korean_text(image, label, (top_left[0], top_left[1] - 30))
 
     # 결과 이미지 출력
