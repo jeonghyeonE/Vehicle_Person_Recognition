@@ -2,7 +2,7 @@ import json
 import os
 
 # JSON 파일이 저장된 디렉토리 설정
-json_dir = 'Vehicle_Person_Recognition/data/labels/train'  # JSON 파일들이 저장된 디렉토리
+json_dir = 'Vehicle_Person_Recognition/data/labels_json/train'  # JSON 파일들이 저장된 디렉토리
 
 # 모든 label들을 저장할 집합 (중복 제거를 위해 집합 사용)
 labels_set = set()

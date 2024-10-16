@@ -19,7 +19,7 @@ def put_korean_text(image, text, position, font_path='data/NanumGothic.ttf', fon
     return img
 
 # JSON 파일과 이미지가 있는 디렉토리 설정
-json_dir = 'Vehicle_Person_Recognition/data/labels/train'  # JSON 파일들이 저장된 디렉토리
+json_dir = 'Vehicle_Person_Recognition/data/labels_json/train'  # JSON 파일들이 저장된 디렉토리
 image_dir = 'Vehicle_Person_Recognition/data/images/train'  # 이미지 파일들이 저장된 디렉토리
 output_dir = 'Vehicle_Person_Recognition/data/output'  # 바운딩박스가 그려진 이미지를 저장할 디렉토리
 

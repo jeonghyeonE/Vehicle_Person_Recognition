@@ -2,9 +2,9 @@ import json
 import os
 
 # JSON 파일과 이미지가 있는 디렉토리 설정
-json_dir = 'Vehicle_Person_Recognition/data/labels/val'  # JSON 파일들이 저장된 디렉토리
+json_dir = 'Vehicle_Person_Recognition/data/labels_json/val'  # JSON 파일들이 저장된 디렉토리
 image_dir = 'Vehicle_Person_Recognition/data/images/val'  # 이미지 파일들이 저장된 디렉토리
-output_label_dir = 'Vehicle_Person_Recognition/data/labels_yolo/val'  # YOLO 형식으로 저장할 레이블 디렉토리
+output_label_dir = 'Vehicle_Person_Recognition/data/labels/val'  # YOLO 형식으로 저장할 레이블 디렉토리
 
 # 출력 디렉토리가 없는 경우 생성
 os.makedirs(output_label_dir, exist_ok=True)
