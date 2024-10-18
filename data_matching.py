@@ -41,5 +41,8 @@ def check_file_pairs(image_dir, json_dir, image_ext='.png', json_ext='.txt'):
 image_dir = 'C:/practice_coding/Vehicle_Person_Recognition/data/images/val'
 json_dir = 'C:/practice_coding/Vehicle_Person_Recognition/data/labels/val'
 
+# C:/practice_coding/Vehicle_Person_Recognition/data/labels_json/train
+# D:/dataset/차량 및 사람 인지 영상/Training/바운딩박스/
+
 # 파일 쌍 확인 실행
 unmatched_images_count, unmatched_jsons_count = check_file_pairs(image_dir, json_dir)
