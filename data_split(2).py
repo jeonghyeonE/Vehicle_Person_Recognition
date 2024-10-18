@@ -34,11 +34,11 @@ def move_files_recursive(base_dir, image_ext, label_ext, dst_images_dir, dst_lab
     print(f'Moved {moved_files_count} files from {base_dir} to the target directories.')
 
 # 이미지와 라벨을 저장할 경로 설정
-dst_images_dir = 'D:/dataset/차량 및 사람 인지 영상/Training/바운딩박스/서울특별시/data/images'
-dst_labels_dir = 'D:/dataset/차량 및 사람 인지 영상/Training/바운딩박스/서울특별시/data/labels_json'
+dst_images_dir = 'D:/dataset/차량 및 사람 인지 영상/Validation/바운딩박스/대구광역시/data/images'
+dst_labels_dir = 'D:/dataset/차량 및 사람 인지 영상/Validation/바운딩박스/대구광역시/data/labels_json'
 
 # 기본 폴더 경로 설정 (예시)
-base_dir = 'D:/dataset/차량 및 사람 인지 영상/Training/바운딩박스/서울특별시/새 폴더'
+base_dir = 'D:/dataset/차량 및 사람 인지 영상/Validation/바운딩박스/대구광역시/새 폴더'
 
 # 파일 이동 실행
 move_files_recursive(base_dir, '.png', '.json', dst_images_dir, dst_labels_dir)
