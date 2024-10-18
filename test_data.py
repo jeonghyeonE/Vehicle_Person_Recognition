@@ -77,8 +77,10 @@ def draw_bounding_boxes(image, boxes, labels, color, font_path='data/NanumGothic
 test_image_dir = 'Vehicle_Person_Recognition/data/test_data/images'
 test_json_dir = 'Vehicle_Person_Recognition/data/test_data/json'
 
+i = '6'
+
 # 학습된 YOLOv8 모델 불러오기
-model = YOLO('runs/detect/yolo_vehicle_person2/weights/best.pt')
+model = YOLO(f'runs/detect/yolo_vehicle_person{i}/weights/best.pt')
 
 # 테스트 이미지 파일 순회
 for image_file in os.listdir(test_image_dir):
@@ -129,6 +131,8 @@ for image_file in os.listdir(test_image_dir):
     cv2.imshow(f'Model Prediction: {image_file}', model_image)
     cv2.imshow(f'Ground Truth (JSON): {image_file}', json_image)
     cv2.imshow(f'Combined: {image_file}', combined_image)
+
+    cv2.imwrite(f'output_data/{i}/{image_file}', combined_image)
 
     # 이미지 창 닫기
     cv2.waitKey(0)
